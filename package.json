@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "kleur": "^4.1.5",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.8"
+  }
+}
