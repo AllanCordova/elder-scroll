@@ -25,7 +25,7 @@ export default class ViewPerssona {
     }
 
     const classType: string = readlineSync.question(
-      "qual classe você escolhe?\n1.Hero\n2.Angel\n3.Sumoner\n"
+      "qual classe você escolhe?\n1.Hero\n2.Angel\n3.Summoner\n"
     );
     return this.controllerPersona.buildPersona(name, classType);
   }

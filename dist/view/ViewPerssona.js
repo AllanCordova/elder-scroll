@@ -18,7 +18,7 @@ class ViewPerssona {
             console.log(kleur_1.default.red("\nSeu perssonagem precisa de um nome!\n"));
             return this.createPersona();
         }
-        const classType = readline_sync_1.default.question("qual classe você escolhe?\n1.Hero\n2.Angel\n3.Sumoner\n");
+        const classType = readline_sync_1.default.question("qual classe você escolhe?\n1.Hero\n2.Angel\n3.Summoner\n");
         return this.controllerPersona.buildPersona(name, classType);
     }
 }

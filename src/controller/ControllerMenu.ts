@@ -1,6 +1,5 @@
 import ViewMenu from "../view/ViewMenu";
 import ViewConsole from "../view/ViewConsole";
-
 import ControllerBattle from "./ControllerBattle";
 
 export default class ControllerMenu {
