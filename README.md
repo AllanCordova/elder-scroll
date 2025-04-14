@@ -43,7 +43,7 @@ Gerencia o fluxo do jogo e liga os modelos às views:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-projeto.git
+   git clone https://github.com/AllanCordova/elder-scroll.git
 2. Instale as dependências:
      ```bash
      npm install
