@@ -3,8 +3,18 @@ import Enemy from "../model/Enemy";
 
 export default class ControllerPersona {
   private player!: Player;
+  public buildEnemy(fast: boolean): Enemy[];
+  public buildEnemy(): Enemy[];
 
-  public buildEnemy(): Enemy[] {
+  public buildEnemy(fast?: boolean): Enemy[] {
+    if (fast !== undefined) {
+      const vampire = new Enemy();
+      vampire.startVampire();
+      const zombie = new Enemy();
+      zombie.startZombie();
+      return [vampire, zombie];
+    }
+
     const goblin = new Enemy();
     goblin.startGoblin();
 

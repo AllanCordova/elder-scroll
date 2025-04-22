@@ -6,7 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Player_1 = __importDefault(require("../model/Player"));
 const Enemy_1 = __importDefault(require("../model/Enemy"));
 class ControllerPersona {
-    buildEnemy() {
+    buildEnemy(fast) {
+        if (fast !== undefined) {
+            const vampire = new Enemy_1.default();
+            vampire.startVampire();
+            const zombie = new Enemy_1.default();
+            zombie.startZombie();
+            return [vampire, zombie];
+        }
         const goblin = new Enemy_1.default();
         goblin.startGoblin();
         const demon = new Enemy_1.default();

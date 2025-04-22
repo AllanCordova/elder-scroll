@@ -7,6 +7,7 @@ const ViewPerssona_1 = __importDefault(require("../view/ViewPerssona"));
 const ControllerPersona_1 = __importDefault(require("./ControllerPersona"));
 const ViewConsole_1 = __importDefault(require("../view/ViewConsole"));
 const ViewBattle_1 = __importDefault(require("../view/ViewBattle"));
+const ViewMenu_1 = __importDefault(require("../view/ViewMenu"));
 const Batlle_1 = __importDefault(require("../model/Batlle"));
 const Db_1 = __importDefault(require("../data/Db"));
 class ControllerBattle {
@@ -16,6 +17,7 @@ class ControllerBattle {
         this.controllerPersona = new ControllerPersona_1.default();
         this.viewPersona = new ViewPerssona_1.default(this.controllerPersona);
         this.viewConsole = new ViewConsole_1.default();
+        this.viewMenu = new ViewMenu_1.default();
         this.db = new Db_1.default();
     }
     startBattle() {
@@ -25,6 +27,7 @@ class ControllerBattle {
             this.executeTurns(i);
             this.endRound();
         }
+        console.log(this.viewMenu.gameIsEnd());
     }
     setupGame() {
         console.log(this.viewPersona.showCreate());

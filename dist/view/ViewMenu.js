@@ -16,6 +16,9 @@ class ViewMenu {
     gameIsClose() {
         return `\nparece que você se divertiu! até mais.`;
     }
+    gameIsEnd() {
+        return `O jogo acabou! obrigado por jogar`;
+    }
     invalid() {
         return `\n${kleur_1.default.red(`Digite um valor dentro do intervalo do menu!`)}`;
     }

@@ -19,6 +19,10 @@ export default class ViewMenu {
     return `\nparece que você se divertiu! até mais.`;
   }
 
+  public gameIsEnd(): string {
+    return `O jogo acabou! obrigado por jogar`
+  }
+
   public invalid(): string {
     return `\n${kleur.red(`Digite um valor dentro do intervalo do menu!`)}`;
   }

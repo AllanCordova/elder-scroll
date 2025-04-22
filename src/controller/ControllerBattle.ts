@@ -2,6 +2,7 @@ import ViewPerssona from "../view/ViewPerssona";
 import ControllerPersona from "./ControllerPersona";
 import ViewConsole from "../view/ViewConsole";
 import ViewBattle from "../view/ViewBattle";
+import ViewMenu from "../view/ViewMenu";
 import Battle from "../model/Batlle";
 import Player from "../model/Player";
 import Enemy from "../model/Enemy";
@@ -11,6 +12,7 @@ export default class ControllerBattle {
   private viewPersona: ViewPerssona;
   private viewConsole: ViewConsole;
   private viewBattle!: ViewBattle;
+  private viewMenu: ViewMenu;
   private controllerPersona: ControllerPersona;
   private battle!: Battle;
   private db: Db;
@@ -22,6 +24,7 @@ export default class ControllerBattle {
     this.controllerPersona = new ControllerPersona();
     this.viewPersona = new ViewPerssona(this.controllerPersona);
     this.viewConsole = new ViewConsole();
+    this.viewMenu = new ViewMenu();
     this.db = new Db();
   }
 
@@ -32,6 +35,7 @@ export default class ControllerBattle {
       this.executeTurns(i);
       this.endRound();
     }
+    console.log(this.viewMenu.gameIsEnd());
   }
 
   private setupGame(): void {
